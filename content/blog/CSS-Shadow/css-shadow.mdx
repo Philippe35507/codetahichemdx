@@ -1,0 +1,44 @@
+---
+title: CSS Shadow - les effets d'ombre sur le texte ou sur un élement
+date: 01/02/2020
+---
+
+1. CSS Shadow sur le texte: 
+
+Dans l'exemple suivant, on va appliquer une ombre à un titre h1. La première valeur correpondra à la position horizontale de l’ombre tandis que la deuxième valeur fera varier la position verticale.
+
+
+```javascript
+
+h1 {
+  text-shadow: 2px 2px;
+}
+
+```
+
+
+On peut ajouter deux valeurs : la taille de l'effet de flou et la couleur de l'ombre. Pour cette dernière valeur on ne peut logiquement qu'utiliser une valeur de couleur mais pour les trois valeurs précédentes on peut utilliser toutes sortes de valeurs : px, rem, em, % ... et ces valeurs peuvent aussi être négatives pour donner un effet bosselé ou au contraire un effet creusé.
+
+```javascript
+    h1 {
+      text-shadow: 2px 2px 5px red;
+   }
+```
+
+2. La propriété Box Shadow: 
+
+
+La propriété box-shadow permet l’ajout d’ombres à un élément, pas sur le texte en lui-même. On retrouve les 4 valeurs vues précédemment.
+
+```javascript
+div {
+  box-shadow: 10px 10px 5px grey;
+}
+```
+
+Il y a en plus 2 autres valeurs optionnelles: 
+la valeur "spread" qui permet de faire varier la taille de l’ombre (px, %, rem ... à placer juste avant la valeur "color") ;
+ainsi que la valeur "inset" qui permet de faire varier la position interne de l’ombre et donc de définir l’ombre comme étant non plus une ombre portée mais une ombre interne à la div (écrire "inset").
+
+
+Cette propriété Box Shadow va permettre d'éviter l'empilement d'éléments div et donc de simplifier notre code. 
