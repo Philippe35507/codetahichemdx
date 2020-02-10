@@ -1,0 +1,233 @@
+
+
+
+
+.posts {
+    list-style-type: none;
+    margin: 0;
+    
+    }
+
+.post {              // title post + date post
+    margin: 1rem 0;
+    box-shadow: 10px 10px 5px grey;
+
+    a {                      // bandeau noir
+        background: rgba(39, 39, 36, 0.507);
+        color: #f5dbdbdc;
+        display: block;
+        padding: 0.1rem 0.2rem;
+        text-decoration: none;                
+        align-content: center;
+        box-shadow: none;
+        
+        }     
+
+        a:hover {                      // list posts               
+            background: rgba(70, 67, 67, 0);   // list posts: suppr transparence
+            text-shadow: 2px 2px 19px red;
+
+            .titre-post {               // title post : hover title
+                    color: rgba(241, 16, 16, 0.856);
+                }
+      
+            .date-post {                // title post: hover date
+                    color: rgba(241, 16, 16, 0.856);
+                }
+        }   
+    
+        .titre-post {    
+            font-size: 1.8rem;       // title post
+            color: white;
+            margin-bottom: 0;
+            
+        }
+        
+        
+        .date-post {                 // date post
+            color: #777777;
+            font-size: .8rem;
+            font-style: italic;
+        }
+}
+
+
+
+// MARKDOWN :
+
+h1 {
+    font-size: 3.5rem;        // titles h1 MD
+    color: rgb(233, 224, 224);  
+    padding: 8rem 0 0 0 ;
+}
+
+p {
+    font-size: 1.4rem;        // p MD
+    color: white;     
+    padding: 1rem 2rem 1rem 0;
+    line-height: 1.6;
+    
+}
+
+li, ol, ul {                  // li ol ul  MD
+    font-size: 2rem;
+    color: rgb(196, 193, 51); 
+    margin-left: -0.3rem;
+    
+    
+            p {
+                font-size: 1.4rem;      // p MD
+                color: white;    
+                
+    }
+}
+
+.language-text {
+    color: rgb(194, 131, 14);    // code  MD
+    background: black;
+    font-size: 1.7rem;
+}
+
+
+a {
+    color: yellow;
+}
+
+
+code[class*="language-"],
+pre[class*="language-"] {
+	color: #c5c8c6;
+	text-shadow: 0 1px rgba(0, 0, 0, 0.3);
+	font-family: Inconsolata, Monaco, Consolas, 'Courier New', Courier, monospace;
+	direction: ltr;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	line-height: 1.5;
+
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	tab-size: 4;
+
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+	padding: 1em;
+	margin: .5em 0;
+	overflow: auto;
+	border-radius: 0.3em;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+	background: #1d1f21;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+	padding: .1em;
+	border-radius: .3em;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+	color: #7C7C7C;
+}
+
+.token.punctuation {
+	color: #c5c8c6;
+}
+
+.namespace {
+	opacity: .7;
+}
+
+.token.property,
+.token.keyword,
+.token.tag {
+	color: #96CBFE;
+}
+
+.token.class-name {
+	color: #FFFFB6;
+	text-decoration: underline;
+}
+
+.token.boolean,
+.token.constant {
+	color: #99CC99;
+}
+
+.token.symbol,
+.token.deleted {
+	color: #f92672;
+}
+
+.token.number {
+	color: #FF73FD;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+	color: #A8FF60;
+}
+
+.token.variable {
+	color: #C6C5FE;
+}
+
+.token.operator {
+	color: #EDEDED;
+}
+
+.token.entity {
+	color: #FFFFB6;
+	cursor: help;
+}
+
+.token.url {
+	color: #96CBFE;
+}
+
+.language-css .token.string,
+.style .token.string {
+	color: #87C38A;
+}
+
+.token.atrule,
+.token.attr-value {
+	color: #F9EE98;
+}
+
+.token.function {
+	color: #DAD085;
+}
+
+.token.regex {
+	color: #E9C062;
+}
+
+.token.important {
+	color: #fd971f;
+}
+
+.token.important,
+.token.bold {
+	font-weight: bold;
+}
+
+.token.italic {
+	font-style: italic;
+}

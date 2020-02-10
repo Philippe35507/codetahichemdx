@@ -1,11 +1,12 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 import { MDXRenderer } from "gatsby-plugin-mdx"
-
-import Bio from "../components/bio"
 import Layout from "../components/layout"
+import blogStyles from "../components/blog.module.scss"
+import "../components/blog.module.scss"
+
 import SEO from "../components/seo"
-import { rhythm, scale } from "../utils/typography"
+
 
 const BlogPostTemplate = ({ data, pageContext, location }) => {
   const post = data.mdx
@@ -18,47 +19,24 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
       />
-      <article>
-        <header>
-          <h1
-            style={{
-              marginTop: rhythm(1),
-              marginBottom: 0,
-            }}
-          >
+      <article className={"blogStyles.posts"}>
+        <header className={"blogStyles.post"}>
+          <h1>
             {post.frontmatter.title}
           </h1>
-          <p
-            style={{
-              ...scale(-1 / 5),
-              display: `block`,
-              marginBottom: rhythm(1),
-            }}
-          >
+          <p>
             {post.frontmatter.date}
           </p>
         </header>
         <MDXRenderer>{post.body}</MDXRenderer>
-        <hr
-          style={{
-            marginBottom: rhythm(1),
-          }}
-        />
+        <hr/>
         <footer>
-          <Bio />
+          
         </footer>
       </article>
 
       <nav>
-        <ul
-          style={{
-            display: `flex`,
-            flexWrap: `wrap`,
-            justifyContent: `space-between`,
-            listStyle: `none`,
-            padding: 0,
-          }}
-        >
+        <ul>
           <li>
             {previous && (
               <Link to={previous.fields.slug} rel="prev">
@@ -94,8 +72,8 @@ export const pageQuery = graphql`
       body
       frontmatter {
         title
-        date
-        description
+        date 
+        
       }
     }
   }
